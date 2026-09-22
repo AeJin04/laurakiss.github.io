@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design & Systemic UX — Editorial Portfolio 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FIXED EDITORIAL HEADER / PRIMARY NAV / BILINGUAL SWITCHER -->
+  <header class="utility-bar">
+    <div class="container utility-flex">
+      <a href="#cover" class="utility-brand" data-i18n="navBrand">PORTFOLIO '26</a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#index" data-i18n="navWork">Work</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#methods" data-i18n="navMethodsNav">Methods</a>
+        <a href="#cover" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <nav class="lang-switcher" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang-btn="en" aria-pressed="true">EN</button>
+        <span class="lang-divider">|</span>
+        <button type="button" class="lang-btn" data-lang-btn="de" aria-pressed="false">DE</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       COVER PAGE
+       ========================================================================== -->
+  <section id="cover" class="magazine-page">
+    <div class="container">
+      <header class="masthead grid-12">
+        <div style="grid-column: span 6;">
+          <span class="meta-text" data-i18n="coverEdition">Portfolio Edition — 2026</span>
+        </div>
+        <div style="grid-column: span 6; text-align: right;">
+          <span class="meta-text" data-i18n="coverSub">Design Research & Strategic UX Architecture</span>
+        </div>
+      </header>
+
+      <div class="grid-12" style="margin-top: 2rem;">
+        <div style="grid-column: span 12;">
+          <h1 class="cover-title" data-i18n="coverTitle">Design & Systemic UX</h1>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 2rem;">
+        <div style="grid-column: span 6;">
+          <p class="editorial-lead" data-i18n="coverLead">Research-driven UX/Product Designer with a focus on physical-digital hybrid experiences — spanning civic tech, sustainability, and spatial/service design. Selected case studies: Algorithmic Agency, Campus Circular Economy, Healthcare Sustainability, and Urban Green Heritage.</p>
+        </div>
+        <div style="grid-column: 8 / 12;">
+          <div class="meta-column">
+            <div class="meta-row"><span class="meta-text" data-i18n="lblAuthor">Author</span><span data-i18n="valAuthor">UX/Product Designer</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblTarget">Target Market</span><span data-i18n="valTarget">Switzerland / EU</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblFocus">Focus</span><span data-i18n="valFocus">Research, Physical-Digital UX, Service Design</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Me, next to a taller portrait -->
+      <div class="grid-12" style="margin-top: 4rem; align-items: start;">
+        <div style="grid-column: span 7;">
+          <span class="meta-text" style="display: block; margin-bottom: 1rem;" data-i18n="aboutLabel">About</span>
+          <p class="editorial-lead" data-i18n="aboutP1">
+            I didn't set out to become a designer. I grew up moving between languages and cultures — German, Swiss German, Hungarian, French, a bit of Dutch — and somewhere between an internship at a bank in Hungary and years working service jobs across the Netherlands, I got curious about something more specific: why some systems make people feel understood, and others don't.
+          </p>
+          <p style="font-size: 1rem; line-height: 1.6; margin-top: 1.25rem; max-width: 640px;" data-i18n="aboutP2">
+            That question is what pulled me into UX. I'm drawn to problems where psychology, technology, and human connection meet — how a feed shapes the way someone relates to their own attention, how a park can make a stranger stop and notice a tree, how a small interaction can quietly build trust or erode it. I care less about making things look finished than about understanding why they work.
+          </p>
+          <p style="font-size: 1rem; line-height: 1.6; margin-top: 1.25rem; max-width: 640px;" data-i18n="aboutP3">
+            I like research that gets my hands dirty — interviews, prototyping in cardboard as often as in Figma, testing ideas until they break in useful ways. I've led teams, built physical installations, and run Scrum sprints for the first time, getting them wrong before getting them right. I'm early in this career, and I like that — it means I'm still asking the questions instead of assuming I already know the answers.
+          </p>
+        </div>
+        <div style="grid-column: 9 / 13;">
+          <!-- IMAGE: COVER — HERO -->
+          <div class="media-frame aspect-2-3">
+            <span class="frame-label" data-i18n="lblCoverHero">[COVER HERO — ARCHIVAL / ABSTRACT TOUCHPOINT]</span>
+            <img src="images/cover-hero.jpeg" alt="Cover hero image" style="object-position: top;">
+            <span class="frame-specs" data-i18n="lblCoverHeroSpecs">PORTRAIT / LANDSCAPE — 4:3 RATIO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TABLE OF CONTENTS / EDITORIAL INDEX
+       ========================================================================== -->
+  <section id="index" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="idxMarkerLeft">Index & Manifesto</span>
+        <span class="meta-text" data-i18n="idxMarkerRight">Page 02 // 10</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 4;">
+          <h2 class="section-title" data-i18n="idxTitle">Curated Works</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;" data-i18n="idxDesc">
+            A collection of four design initiatives spanning algorithmic feed research, campus circular service design, spatial installation for healthcare sustainability, and civic heritage storytelling in public green space.
+          </p>
+          <!-- IMAGE: INDEX — EDITORIAL SKETCH -->
+          <div class="media-frame aspect-1-1">
+            <span class="frame-label" data-i18n="lblIdxImg">[EDITORIAL ABSTRACT SKETCH]</span>
+            <img src="images/index-editorial-sketch.png" alt="Editorial abstract sketch">
+            <span class="frame-specs">SQUARE — 1:1 RATIO</span>
+          </div>
+        </div>
+
+        <div style="grid-column: 6 / 13;">
+          <a href="#project-01" class="index-item">
+            <span class="meta-text">01</span>
+            <div>
+              <h3>Bursting the Bubble</h3>
+              <p class="meta-text" data-i18n="p1Sub">Exploratory Bachelor's Thesis — Algorithmic Agency Framework</p>
+            </div>
+            <span class="meta-text">P. 03</span>
+          </a>
+
+          <a href="#project-02" class="index-item">
+            <span class="meta-text">02</span>
+            <div>
+              <h3>SwapU (Mission Zero)</h3>
+              <p class="meta-text" data-i18n="p2Sub">Solo Service Design Project — Campus Circular Economy</p>
+            </div>
+            <span class="meta-text">P. 05</span>
+          </a>
+
+          <a href="#project-03" class="index-item">
+            <span class="meta-text">03</span>
+            <div>
+              <h3>Re:Waste</h3>
+              <p class="meta-text" data-i18n="p3Sub">Team Project — Spatial UX & Interactive Installation, TU Delft</p>
+            </div>
+            <span class="meta-text">P. 06</span>
+          </a>
+
+          <a href="#project-04" class="index-item">
+            <span class="meta-text">04</span>
+            <div>
+              <h3>Clingendael Quest</h3>
+              <p class="meta-text" data-i18n="p4Sub">Team Project — Civic Heritage & Spatial Storytelling</p>
+            </div>
+            <span class="meta-text">P. 07</span>
+          </a>
+
+          <a href="#skills" class="index-item">
+            <span class="meta-text">05</span>
+            <div>
+              <h3 data-i18n="skillsTitle">Skills</h3>
+              <p class="meta-text" data-i18n="idx5Sub">Reference — Evidence-Linked Competencies</p>
+            </div>
+            <span class="meta-text">P. 08</span>
+          </a>
+
+          <a href="#methods" class="index-item">
+            <span class="meta-text">06</span>
+            <div>
+              <h3 data-i18n="methodsTitle">Methods</h3>
+              <p class="meta-text" data-i18n="idx6Sub">Reference — Research & Design Methods</p>
+            </div>
+            <span class="meta-text">P. 09</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECT 01: BURSTING THE BUBBLE
+       ========================================================================== -->
+  <section id="project-01" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="p1MarkerLeft">Project 01 // Flagship Thesis</span>
+        <span class="meta-text">Bursting the Bubble</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <span class="meta-text" style="color: var(--accent-red);" data-i18n="p1Tag">01. Bachelor's Thesis & Research Framework</span>
+          <h2 class="project-headline" style="margin-top: 0.5rem; margin-bottom: 2rem;" data-i18n="p1Title">
+            Redesigning Agency in Personalised Feeds
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 8;">
+          <!-- IMAGE: PROJECT 01 — HERO -->
+          <div class="media-frame aspect-16-9">
+            <span class="frame-label" data-i18n="p1Img1">[PROJECT 01 — HERO IMAGE]</span>
+            <img src="images/project-01-hero.png" alt="Project 01 hero — ARC framework dashboard">
+            <span class="frame-specs" data-i18n="p1Img1Specs">LANDSCAPE — 16:9 RATIO</span>
+          </div>
+        </div>
+        <div style="grid-column: span 4;">
+          <div class="meta-column">
+            <div class="meta-row"><span class="meta-text" data-i18n="lblTimeline">Timeline</span><span data-i18n="p1ValTimeline">17 Weeks (Bachelor's Thesis)</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblRole">Role</span><span data-i18n="p1ValRole">UX Designer & Researcher</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblProgram">Program</span><span data-i18n="p1ValProgram">UX Design, THUAS — Civic Technology Group</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblMentors">Mentors</span><span data-i18n="p1ValMentors">Jos van Leeuwen, Kees Sommer, Alex Zakkas</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblResult">Result</span><span data-i18n="p1ValResult">Graded 10/10; recommended for further presentation (e.g. CAI)</span></div>
+          </div>
+          <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);" data-i18n="p1Brief">
+            Investigating how personalised recommendation algorithms — the feeds behind most social platforms — narrow what people see, reinforce existing identity, and quietly erode their sense of control. The central question: could interface design restore awareness, agency, and intentionality for Gen Z feed users, without asking them to abandon algorithmic feeds altogether?
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 6;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p1Heading1">Method & Rigor</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="p1Body1">
+            The research moved through five stages: structured desk research across academic databases (2014–2025) with explicit inclusion criteria, two one-on-one interviews with heavy social media users who wanted more control, a co-creation workshop sketching interface ideas together with Gen Z participants, an 18-person Gen Z survey testing an early provocative concept, and moderated usability testing with a think-aloud protocol on the final prototype. Every insight in the write-up is numbered by source, so each design decision traces back to the exact evidence behind it.
+          </p>
+        </div>
+        <div style="grid-column: span 6;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p1Heading2">Design Goals</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="p1Body2">
+            That research converged on a small set of goals: make the algorithm's influence visible instead of invisible, give people a genuine sense of control, interrupt mindless scrolling, encourage exploration beyond the feed's comfort zone, let users personalise structure and aesthetics rather than just content, and support wellbeing without punitive restriction.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 1.5rem;">
+        <div style="grid-column: span 12;">
+          <div class="pull-quote" data-i18n="p1Quote">
+            "Awareness without agency breeds fatalism, not behavioral change."
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project 01 Evolution -->
+  <section class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="p1EvoMarker">Project 01 // Research Mechanisms</span>
+        <span class="meta-text" data-i18n="p1EvoSub">The 3-Prototype Evolution</span>
+      </div>
+
+      <!-- Image triptych — the 3-prototype evolution -->
+      <div class="img-triptych">
+        <div>
+          <!-- IMAGE: PROJECT 01 — PROTOTYPE 01 -->
+          <div class="media-frame aspect-3-4">
+            <span class="frame-label" data-i18n="p1Proto1Img">[PROTOTYPE 01 — DYSTOPIAN NOTIFICATIONS UI]</span>
+            <img src="images/project-01-prototype-01.png" alt="Prototype stage 01 — dystopian notifications UI">
+            <span class="frame-specs">PORTRAIT — 3:4 RATIO</span>
+          </div>
+          <h4 style="margin-top: 1rem; font-size: 1rem;" data-i18n="p1Proto1Title">Stage 01: Awareness</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="p1Proto1Desc">
+            A deliberately provocative interface exposing exactly how the algorithm tracks and infers behaviour — designed to unsettle, not for daily use. It made the invisible visible, but gave people no way to act on what they now knew, a gap that shaped the next two prototypes.
+          </p>
+        </div>
+
+        <div>
+          <!-- IMAGE: PROJECT 01 — PROTOTYPE 02 -->
+          <div class="media-frame aspect-3-4">
+            <span class="frame-label" data-i18n="p1Proto2Img">[PROTOTYPE 02 — MYCELIUM SPATIAL FEED UI]</span>
+            <img src="images/project-01-prototype-02.png" alt="Prototype stage 02 — mycelium spatial feed UI">
+            <span class="frame-specs">PORTRAIT — 3:4 RATIO</span>
+          </div>
+          <h4 style="margin-top: 1rem; font-size: 1rem;" data-i18n="p1Proto2Title">Stage 02: Balance</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="p1Proto2Desc">
+            A spatial, non-linear feed built around a growth metaphor, replacing the infinite vertical list. Testers described feeling calmer and less rushed — but the same distinctive, node-based layout came at a real cost to legibility, a trade-off worth naming rather than hiding.
+          </p>
+        </div>
+
+        <div>
+          <!-- IMAGE: PROJECT 01 — PROTOTYPE 03 -->
+          <div class="media-frame aspect-3-4">
+            <span class="frame-label" data-i18n="p1Proto3Img">[PROTOTYPE 03 — ARC SYSTEM UI]</span>
+            <img src="images/project-01-prototype-03.png" alt="Prototype stage 03 — ARC system UI">
+            <span class="frame-specs">PORTRAIT — 3:4 RATIO</span>
+          </div>
+          <h4 style="margin-top: 1rem; font-size: 1rem;" data-i18n="p1Proto3Title">Stage 03: Intentionality</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="p1Proto3Desc">
+            The most resolved prototype: a pre-configuration portal where users set an intent and time boundary before entering a session, a modular spatial workspace in place of a linear feed, and an "Intermission Moment" — a reflective close instead of an abrupt cutoff. Across all three prototypes, the portal was the single most well-received element.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 12;">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th data-i18n="tblAct">Framework Act</th>
+                <th data-i18n="tblTouchpoint">UI Touchpoint</th>
+                <th data-i18n="tblMechanism">Mechanism</th>
+                <th data-i18n="tblImpact">Intended Effect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong data-i18n="tblAct1">Act I: Pre-Config</strong></td>
+                <td data-i18n="tblTouch1">Portal Gatekeeper UI</td>
+                <td data-i18n="tblMech1">Mandatory time-boundary and intent selection prior to feed entry.</td>
+                <td data-i18n="tblImp1">Aims to break the automatic-scroll habit before it starts.</td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tblAct2">Act II: Workspace</strong></td>
+                <td data-i18n="tblTouch2">Spatial Canvas Engine</td>
+                <td data-i18n="tblMech2">Replaces linear lists with resizable node containers.</td>
+                <td data-i18n="tblImp2">Testers described feeling more in control of the session.</td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tblAct3">Act III: Soft Closure</strong></td>
+                <td data-i18n="tblTouch3">Souvenir Summary Cards</td>
+                <td data-i18n="tblMech3">End-of-session reflective cards replacing rigid timers.</td>
+                <td data-i18n="tblImp3">Encourages positive closure without guilt.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Limitations -->
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 12;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem;" data-i18n="p1LimitsHeading">Limitations</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 800px;" data-i18n="p1LimitsBody">
+            These findings are best read as design directions, not statistically validated conclusions — sample sizes were small and self-selected: three testers for the Awareness prototype, eighteen respondents for the Mycelium Feed survey. The scope was also limited to Gen Z users of entertainment-oriented platforms.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECT 02: SWAPU (MISSION ZERO)
+       ========================================================================== -->
+  <section id="project-02" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="p2MarkerLeft">Project 02 // Service Design & User Research</span>
+        <span class="meta-text">SwapU / Mission Zero</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <span class="meta-text" style="color: var(--accent-red);" data-i18n="p2Tag">02. Campus Circular Economy — Service Design</span>
+          <h2 class="project-headline" style="margin-top: 0.5rem; margin-bottom: 1.5rem;" data-i18n="p2Title">
+            Designing Trust Into Campus Exchange
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 5;">
+          <!-- IMAGE: PROJECT 02 — APP UI -->
+          <div class="media-frame aspect-3-4">
+            <span class="frame-label" data-i18n="p2Img2">[SWAPU MOBILE APP — INVENTORY BROWSING]</span>
+            <img src="images/project-03-app-ui.png" alt="SwapU mobile app UI — inventory browsing">
+            <span class="frame-specs">3:4</span>
+          </div>
+        </div>
+        <div style="grid-column: span 7;">
+          <div class="meta-column">
+            <div class="meta-row"><span class="meta-text" data-i18n="lblTutor">Tutor</span><span data-i18n="p2ValTutor">Dany Aguirre Broca</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblClient">Client</span><span data-i18n="p2ValClient">Jolanda Lütteke — Mission Zero</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblProgram">Program</span><span data-i18n="p2ValProgram">UX Design, THUAS (Solo Project)</span></div>
+          </div>
+          <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);" data-i18n="p2Lead">
+            A solo project designing a digital-plus-physical system for The Hague University of Applied Sciences, letting students and staff swap or give away items for free — extending a physical exchange space already on campus, in support of the university's Mission Zero sustainability initiative.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 6;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p2Heading1">Method</h3>
+          <p style="font-size: 0.9rem;" data-i18n="p2Body1">
+            The process started with two transcribed interviews and a student survey, clustered into an affinity map to surface where trust and awareness were actually breaking down. From there, the concept moved through three prototype fidelities — paper, mid-fidelity, and a final high-fidelity Figma prototype — with real user testing at every stage shaping what came next.
+          </p>
+        </div>
+        <div style="grid-column: span 6;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p2Heading2">Low-Fi: What Testing Fixed</h3>
+          <p style="font-size: 0.9rem;" data-i18n="p2Body2">
+            The paper prototype was tested in person first. Testers found the dual navigation — swiping and tapping meant slightly different things — confusing, so it was simplified to tap-only. There were no visible rules for what could be uploaded, so a dedicated rules section was added. And the chat felt impersonal without any sense of who was on the other end, so usernames were introduced.
+          </p>
+        </div>
+      </div>
+
+      <!-- Text + image — Mid-Fi and Hi-Fi both beside the exchange-hub photo -->
+      <div class="img-text-pair img-text-pair--narrow-image" style="margin-top: 3rem;">
+        <div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p2Heading3">Mid-Fi: Sharper Interactions</h3>
+          <p style="font-size: 0.9rem;" data-i18n="p2Body3">
+            The mid-fidelity version, demoed to the client, tutor, and classmates, introduced Polaroid-style item cards and a green palette suited to the sustainability context. Testers found the "X" button ambiguous — some read it as "never show this again" rather than the intended "back to home" — flagged for a clearer icon. Feedback also surfaced two real needs: a share button, and a no-contact pickup option for people who felt anxious about face-to-face exchanges. Both were added to the plan.
+          </p>
+          <h3 style="font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem;" data-i18n="p2Heading4">Hi-Fi & Outcome</h3>
+          <p style="font-size: 0.9rem;" data-i18n="p2Body4">
+            The final Figma prototype, tested with two more users, settled on a browse/mine toggle, category filters, item upload via QR code, "new item" labels, and a short prompt when an item is removed — asking whether it was exchanged or simply given away — to start tracking real usage. Nearly every interface decision in the final version traces back to a specific piece of user feedback from an earlier round.
+          </p>
+        </div>
+        <div>
+          <!-- IMAGE: PROJECT 02 — HERO -->
+          <div class="media-frame aspect-4-3">
+            <span class="frame-label" data-i18n="p2Img1">[SWAPU — HERO IMAGE]</span>
+            <img src="images/project-03-hero.png" alt="SwapU physical exchange hub sketch/render">
+            <span class="frame-specs">4:3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 2rem;">
+        <div style="grid-column: span 12;">
+          <div class="pull-quote" data-i18n="p2Quote">
+            "A physical shelf will fail without a digital layer that people actually trust."
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECT 03: RE:WASTE
+       ========================================================================== -->
+  <section id="project-03" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="p3MarkerLeft">Project 03 // Spatial UX & Co-Creation</span>
+        <span class="meta-text">Re:Waste (TU Delft)</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <span class="meta-text" style="color: var(--accent-red);" data-i18n="p3Tag">03. Spatial UX & Interactive Installation</span>
+          <h2 class="project-headline" style="margin-top: 0.5rem; margin-bottom: 1rem;" data-i18n="p3Title">
+            Making Invisible Waste Visible
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-bottom: 2rem;">
+        <div style="grid-column: span 7;">
+          <!-- IMAGE: PROJECT 03 — HERO -->
+          <div class="media-frame aspect-16-9">
+            <span class="frame-label" data-i18n="p3Img1">[RE:WASTE — HERO IMAGE]</span>
+            <img src="images/project-04-hero.png" alt="Re:Waste — dual shipping container architectural render">
+            <span class="frame-specs">FULL BLEED LANDSCAPE — 16:9 RATIO</span>
+          </div>
+        </div>
+        <div style="grid-column: span 5;">
+          <div class="meta-column">
+            <div class="meta-row"><span class="meta-text" data-i18n="lblCourse">Course</span><span data-i18n="p3ValCourse">Project Shared Spaces, 2024–2025 (THUAS)</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblClient">Client</span><span data-i18n="p3ValClient">Sustainable Healthcare Learning Community (TU Delft)</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblTutors">Tutors</span><span data-i18n="p3ValTutors">Romy Koch, Lydia The</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblFormat">Format</span><span data-i18n="p3ValFormat">Travelling interactive two-container installation</span></div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);" data-i18n="p3Brief">
+            Working in a team of six for TU Delft's Sustainable Healthcare Learning Community, I led ideation and planning and built the project's physical maquette. Dutch hospitals produce up to 2,000 kg of waste per hospital bed every year, and healthcare accounts for roughly 7% of the Netherlands' CO2 emissions — a footprint almost nobody outside the sector is aware of. Our task was to design a physical, interactive space that made that impact visible and drove engagement with the Learning Community working to change it.
+          </p>
+        </div>
+      </div>
+
+      <!-- Text + image pairs — one per container -->
+      <div class="img-text-pair">
+        <div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p3Heading1">Container 01: "The Impact"</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;" data-i18n="p3Body1">
+            A public storytelling zone: real healthcare waste objects, patient stories, and a physical lifecycle maquette that translates abstract CO2 figures into something visitors can picture, using an Eiffel-Tower-scale comparison.
+          </p>
+        </div>
+        <div>
+          <!-- IMAGE: PROJECT 03 — DETAIL 01 -->
+          <div class="media-frame aspect-4-3">
+            <span class="frame-label" data-i18n="p3Img2">[PHYSICAL MAQUETTE TESTING WITH EIFFEL TOWER CO2 METRIC]</span>
+            <img src="images/project-04-detail-01.png" alt="Physical maquette testing with Eiffel Tower CO2 metric">
+            <span class="frame-specs">DOCUMENTARY PHOTO — 4:3 RATIO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-text-pair" style="margin-top: 3rem;">
+        <div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p3Heading2">Container 02: "The Action"</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;" data-i18n="p3Body2">
+            A participation zone — semi-private reflection pods where visitors respond to prompts and submit ideas to a shared digital whiteboard archive, turning a moment of awareness into something people could act on immediately.
+          </p>
+        </div>
+        <div>
+          <!-- IMAGE: PROJECT 03 — DETAIL 02 -->
+          <div class="media-frame aspect-4-3">
+            <span class="frame-label" data-i18n="p3Img3">[REFLECTION POD ERGONOMICS & DIGITAL WHITEBOARD INTEGRATION]</span>
+            <img src="images/project-04-detail-02.png" alt="Reflection pod ergonomics and digital whiteboard integration">
+            <span class="frame-specs">DOCUMENTARY PHOTO — 4:3 RATIO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 12;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 2px solid var(--text-ink); padding-bottom: 0.5rem;" data-i18n="p3TestTitle">
+            Formative Prototyping & Testing Insights
+          </h3>
+        </div>
+      </div>
+
+      <!-- Testing insights — one write-up per prototyping round -->
+      <div class="grid-12" style="margin-top: 1.5rem;">
+        <div style="grid-column: span 4;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="p3Test1Title">Pod Ergonomics Iteration</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="p3Test1Desc">
+            Initial tests revealed claustrophobia in study booths. Redesigned with curved edges, natural skylighting, motion-activated lights, and acoustic foam panels.
+          </p>
+        </div>
+        <div style="grid-column: span 4;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="p3Test2Title">Spatial Flow Correction</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="p3Test2Desc">
+            Paper model walkthroughs exposed exit/entrance confusion. Introduced bold floor arrows, spatial zoning graphics, and explicit pod prompt cards.
+          </p>
+        </div>
+        <div style="grid-column: span 4;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="p3Test3Title">Physical vs. Digital Maquette</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="p3Test3Desc">
+            Digital maquette screens confused users. Transitioned to a life-sized physical model, resulting in significantly higher clarity and engagement.
+          </p>
+        </div>
+      </div>
+
+      <!-- My contribution -->
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 12;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem;" data-i18n="p3ContribHeading">My Role</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 800px;" data-i18n="p3ContribBody">
+            My own focus was ideation, planning, and building the physical maquette by hand. In peer reviews, my teammates independently described me as someone who took the lead frequently, acted as the main point of contact for the client and tutors, and was good at delegating tasks while keeping an overview of what needed to happen. The same reviews also included fair, useful feedback: that my delivery could feel intense under pressure, and that I sometimes took on more than I needed to rather than trusting teammates with tasks — something I've kept in mind on every team project since.
+          </p>
+        </div>
+      </div>
+
+      <p class="meta-text" style="margin-top: 2rem; text-transform: none; letter-spacing: normal;" data-i18n="p3TeamCredit">Team project with 5 others · Client: Sustainable Healthcare Learning Community, TU Delft</p>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECT 04: CLINGENDAEL QUEST
+       ========================================================================== -->
+  <section id="project-04" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="p4MarkerLeft">Project 04 // Civic Heritage & Spatial Storytelling</span>
+        <span class="meta-text">Clingendael Quest</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <span class="meta-text" style="color: var(--accent-red);" data-i18n="p4Tag">04. Civic Tech & Spatial Storytelling</span>
+          <h2 class="project-headline" style="margin-top: 0.5rem; margin-bottom: 1.5rem;" data-i18n="p4Title">
+            Telling the Story of Urban Green Heritage
+          </h2>
+        </div>
+      </div>
+
+      <!-- TODO: add hero image for Clingendael Quest (e.g. park photo, Quest Map brochure, or hollow-tree 3D render) -->
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <div class="meta-column" style="max-width: 700px;">
+            <div class="meta-row"><span class="meta-text" data-i18n="lblCourse">Course</span><span data-i18n="p4ValCourse">PS2 Smart Society, THUAS</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblProductOwner">Product Owner</span><span data-i18n="p4ValProductOwner">Kees Sommer</span></div>
+            <div class="meta-row"><span class="meta-text" data-i18n="lblStakeholders">Stakeholders</span><span data-i18n="p4ValStakeholders">Wilko van Zijverden, Ronald Visser</span></div>
+          </div>
+          <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); max-width: 900px;" data-i18n="p4Brief">
+            Clingendael Park in The Hague holds historically significant trees, including carvings left by soldiers during WWII — real history layered inside a park that's also been described as "artificial nature": curated and human-shaped rather than wild. Our brief, from product owner Kees Sommer, was deliberately open-ended: design a hybrid physical/digital experience that deepens visitors' emotional connection to the park's trees and history and encourages stewardship — without intrusive installations, and without physical signage, which isn't permitted in the park.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 3rem;">
+        <div style="grid-column: span 6;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p4Heading1">Process</h3>
+          <p style="font-size: 0.9rem;" data-i18n="p4Body1">
+            We ran the project as a real Scrum team across four sprints, with a product backlog, sprint goals, burndown charts, a retrospective after every sprint, and a Scrum Master role that rotated between team members. I held that role for Sprint 0 — the team's first-ever sprint, effectively a trial run of Scrum for everyone — which is also when we built our first backlog as a Waterfall-style task list instead of proper user stories, a genuine misunderstanding of how Scrum backlogs work. We caught it mid-sprint and rebuilt it around user stories from scratch, a better way to learn the framework than getting it right the first time.
+          </p>
+        </div>
+        <div style="grid-column: span 6;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p4Heading2">Research</h3>
+          <p style="font-size: 0.9rem;" data-i18n="p4Body2">
+            Research followed four user-story-driven threads: how visitors balance physical and digital time in the park, how tree heritage is currently communicated, what drives an emotional connection to trees, and what brings visitors back — I owned one of these threads. We gathered this through park observation, informal conversations with visitors, and interviews with people who return regularly. Recurring findings: visitors valued the park precisely because it felt separate from the city; they preferred minimal, unobtrusive information; existing signage was Dutch-only, limiting who could access it; QR codes worked for some visitors but not universally; and the Japanese Garden's restricted access was a consistent source of frustration.
+          </p>
+        </div>
+      </div>
+
+      <!-- TODO: add image — hollow-tree 3D model and/or Quest Map / character-sheet designs -->
+      <div class="grid-12" style="margin-top: 2rem;">
+        <div style="grid-column: span 12;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p4Heading3">Concept: Quest</h3>
+          <p style="font-size: 0.9rem; max-width: 900px;" data-i18n="p4Body3">
+            I contributed a high volume of concept ideas during early, divergent ideation, several of which shaped the final direction — among them a seasonal "cultural lens" structure rotating through traditions like Japanese hanami, Scandinavian forest-bathing, Hungarian harvest customs, and Dutch design references, and a digital tree-ring memory archive ("Treedentity") built around giving trees their own persistent identity. The team converged on "Quest": a role-based journey where visitors pick up a hand-drawn Quest Map brochure and take on a role — Story Keeper, Tree Scientist, Nature Guardian, or Past Seeker — each with a tabletop-RPG-style character sheet, unlocking a park-wide narrative through activity stations. Once the team converged on this direction, I produced the concept sketches together with teammate Eszter Stróbl and turned it into a spatial plan mapping which activity happened where in the actual park. The client responded especially well to the character-sheet format and to a "hollow tree" interaction I modeled in 3D, and expressed interest in exploring a "holographic tree" direction as a way to create presence in the park without physical intervention. We also shifted from a booklet to a brochure format specifically to differentiate our concept from a second student group working the same brief in parallel.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-12" style="margin-top: 2rem;">
+        <div style="grid-column: span 12;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="p4Heading4">Outcome</h3>
+          <p style="font-size: 0.9rem; max-width: 900px;" data-i18n="p4Body4">
+            Kees responded positively throughout, praising the depth of the research and the pace of iteration, and gave direct steering advice for the final expo — to fully realize one route, Nature Guardian, rather than spreading the demo thin across all four roles. I also built the presentation slides and wrote the plain-language project description used in the client debrief.
+          </p>
+        </div>
+      </div>
+
+      <p class="meta-text" style="margin-top: 2rem; text-transform: none; letter-spacing: normal;" data-i18n="p4TeamCredit">Team project with 4 others · Product Owner: Kees Sommer</p>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS — EVIDENCE-LINKED COMPETENCIES
+       ========================================================================== -->
+  <section id="skills" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="skillsMarkerLeft">Skills Index</span>
+        <span class="meta-text" data-i18n="skillsMarkerRight">Evidence-Linked Competencies</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
+          <p class="methods-intro" data-i18n="skillsIntro">
+            A single, evidence-linked list — every skill below ties back to the specific project(s) that put it into practice.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category 01 — Research -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="skillCatResearchNum">01</span>
+          <h3 class="method-category-title" data-i18n="skillCatResearchTitle">Research</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">01</span>
+            <h4 class="method-card-name" data-i18n="sk01Name">Mixed-Methods Research</h4>
+            <p class="method-card-tag" data-i18n="sk01Tag">Bursting the Bubble, SwapU</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">02</span>
+            <h4 class="method-card-name" data-i18n="sk02Name">Usability & Formative Testing</h4>
+            <p class="method-card-tag" data-i18n="sk02Tag">Bursting the Bubble, SwapU, Re:Waste</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">03</span>
+            <h4 class="method-card-name" data-i18n="sk03Name">Stakeholder & User Interviews</h4>
+            <p class="method-card-tag" data-i18n="sk03Tag">SwapU, Re:Waste, Clingendael Quest</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 02 — Process -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="skillCatProcessNum">02</span>
+          <h3 class="method-category-title" data-i18n="skillCatProcessTitle">Process</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">04</span>
+            <h4 class="method-card-name" data-i18n="sk04Name">Scrum / Agile Process</h4>
+            <p class="method-card-tag" data-i18n="sk04Tag">Clingendael Quest</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">05</span>
+            <h4 class="method-card-name" data-i18n="sk05Name">Rapid Prototyping (Low- to Hi-Fidelity)</h4>
+            <p class="method-card-tag" data-i18n="sk05Tag">SwapU, Bursting the Bubble</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">06</span>
+            <h4 class="method-card-name" data-i18n="sk06Name">Service Design & Blueprinting</h4>
+            <p class="method-card-tag" data-i18n="sk06Tag">SwapU, Re:Waste</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 03 — Craft -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="skillCatCraftNum">03</span>
+          <h3 class="method-category-title" data-i18n="skillCatCraftTitle">Craft</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">07</span>
+            <h4 class="method-card-name" data-i18n="sk07Name">Physical & Spatial Prototyping</h4>
+            <p class="method-card-tag" data-i18n="sk07Tag">Re:Waste, Clingendael Quest</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">08</span>
+            <h4 class="method-card-name" data-i18n="sk08Name">Figma Prototyping</h4>
+            <p class="method-card-tag" data-i18n="sk08Tag">SwapU, Bursting the Bubble</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">09</span>
+            <h4 class="method-card-name" data-i18n="sk09Name">Concept Sketching & Visual Ideation</h4>
+            <p class="method-card-tag" data-i18n="sk09Tag">Clingendael Quest</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 04 — Collaboration -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="skillCatCollabNum">04</span>
+          <h3 class="method-category-title" data-i18n="skillCatCollabTitle">Collaboration</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">10</span>
+            <h4 class="method-card-name" data-i18n="sk10Name">Team Leadership & Delegation</h4>
+            <p class="method-card-tag" data-i18n="sk10Tag">Re:Waste</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">11</span>
+            <h4 class="method-card-name" data-i18n="sk11Name">Client-Facing Communication</h4>
+            <p class="method-card-tag" data-i18n="sk11Tag">SwapU, Re:Waste, Clingendael Quest</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">12</span>
+            <h4 class="method-card-name" data-i18n="sk12Name">Scrum Master Facilitation</h4>
+            <p class="method-card-tag" data-i18n="sk12Tag">Clingendael Quest</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       METHODS — REFERENCE PAGE
+       ========================================================================== -->
+  <section id="methods" class="magazine-page">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="methodsMarkerLeft">Reference Index</span>
+        <span class="meta-text" data-i18n="methodsMarkerRight">Methods & Practice</span>
+      </div>
+
+      <div class="grid-12">
+        <div style="grid-column: span 12;">
+          <h2 class="section-title" data-i18n="methodsTitle">Methods</h2>
+          <p class="methods-intro" data-i18n="methodsIntro">
+            A selection of UX and design research methods I have worked with across the projects in this portfolio — applied in context, not used for their own sake.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category 01 — Research -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="catResearchNum">01</span>
+          <h3 class="method-category-title" data-i18n="catResearchTitle">Research</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">01</span>
+            <h4 class="method-card-name" data-i18n="m01Name">Stakeholder Interviews</h4>
+            <p class="method-card-desc" data-i18n="m01Desc">Qualitative conversations with multiple stakeholder groups to surface needs, constraints, and conflicting priorities.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">02</span>
+            <h4 class="method-card-name" data-i18n="m02Name">Surveys</h4>
+            <p class="method-card-desc" data-i18n="m02Desc">Quantitative questionnaires used to validate patterns found in qualitative research at scale.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">03</span>
+            <h4 class="method-card-name" data-i18n="m03Name">Desk Research</h4>
+            <p class="method-card-desc" data-i18n="m03Desc">Structured review of existing literature, market data, and prior work to frame a project before fieldwork begins.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">04</span>
+            <h4 class="method-card-name" data-i18n="m04Name">Site Visits</h4>
+            <p class="method-card-desc" data-i18n="m04Desc">On-location observation used to ground design decisions in the real physical and organisational context.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">05</span>
+            <h4 class="method-card-name" data-i18n="m05Name">Competitive & Market Analysis</h4>
+            <p class="method-card-desc" data-i18n="m05Desc">Sizing markets and reviewing comparable products to test commercial and strategic viability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 02 — Synthesis & Analysis -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="catSynthesisNum">02</span>
+          <h3 class="method-category-title" data-i18n="catSynthesisTitle">Synthesis & Analysis</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">06</span>
+            <h4 class="method-card-name" data-i18n="m06Name">Mixed-Methods Synthesis</h4>
+            <p class="method-card-desc" data-i18n="m06Desc">Combining quantitative and qualitative findings into a single, decision-ready set of insights.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">07</span>
+            <h4 class="method-card-name" data-i18n="m07Name">Research Synthesis</h4>
+            <p class="method-card-desc" data-i18n="m07Desc">Distilling exploratory research into a clear problem framing that can drive design direction.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">08</span>
+            <h4 class="method-card-name" data-i18n="m08Name">Service Blueprinting & Systems Mapping</h4>
+            <p class="method-card-desc" data-i18n="m08Desc">Mapping actors, touchpoints, and rules across a service to design governance that actually holds up in use.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 03 — Ideation & Design -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="catIdeationNum">03</span>
+          <h3 class="method-category-title" data-i18n="catIdeationTitle">Ideation & Design</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">09</span>
+            <h4 class="method-card-name" data-i18n="m09Name">Prototyping</h4>
+            <p class="method-card-desc" data-i18n="m09Desc">Building successive, testable versions of an interface or system to learn before committing to a final design.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">10</span>
+            <h4 class="method-card-name" data-i18n="m10Name">Service Design</h4>
+            <p class="method-card-desc" data-i18n="m10Desc">Designing the end-to-end structure of a service, not just its interface.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">11</span>
+            <h4 class="method-card-name" data-i18n="m11Name">Co-Design & Participatory Design</h4>
+            <p class="method-card-desc" data-i18n="m11Desc">Involving end users directly in generating and shaping ideas rather than designing for them in isolation.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">12</span>
+            <h4 class="method-card-name" data-i18n="m12Name">Spatial & Experience Design</h4>
+            <p class="method-card-desc" data-i18n="m12Desc">Designing physical environments and installations as part of a coherent digital-physical experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 04 — Evaluation -->
+      <div class="method-category">
+        <div class="method-category-header">
+          <span class="method-category-number" data-i18n="catEvalNum">04</span>
+          <h3 class="method-category-title" data-i18n="catEvalTitle">Evaluation</h3>
+        </div>
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-card-index">13</span>
+            <h4 class="method-card-name" data-i18n="m13Name">Usability & Formative Testing</h4>
+            <p class="method-card-desc" data-i18n="m13Desc">Early, low-cost testing of prototypes with real users to catch problems while they are still cheap to fix.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card-index">14</span>
+            <h4 class="method-card-name" data-i18n="m14Name">Concept & Prototype Testing</h4>
+            <p class="method-card-desc" data-i18n="m14Desc">Comparing alternative concepts (e.g. physical vs. digital) directly with users to decide what actually works.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CLOSING / BACK COVER & IMPRINT
+       ========================================================================== -->
+  <section id="contact" class="magazine-page" style="border-bottom: none;">
+    <div class="container">
+      <div class="page-marker">
+        <span class="meta-text" data-i18n="contactMarkerLeft">Imprint & Contact</span>
+        <span class="meta-text" data-i18n="contactMarkerRight">End of Publication</span>
+      </div>
+
+      <div class="grid-12" style="margin-top: 4rem;">
+        <div style="grid-column: span 8;">
+          <h2 class="project-headline" style="margin-bottom: 2rem;" data-i18n="contactTitle">
+            Let's Build Responsible, Impactful Systems.
+          </h2>
+          <p class="editorial-lead" style="margin-bottom: 2rem; max-width: 600px;" data-i18n="contactLead">
+            Available for Product Design, UX Strategy, and Design Research roles across Switzerland and Europe.
+          </p>
+
+          <div style="margin-top: 3rem;">
+            <span class="meta-text" style="display: block; margin-bottom: 0.5rem;" data-i18n="contactDirect">Direct Correspondence</span>
+            <p style="font-family: var(--font-mono); font-size: 1.25rem;"><a href="mailto:laurakiss18@gmail.com" style="color: inherit; text-decoration: none;">laurakiss18@gmail.com</a></p>
+            <p style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--text-muted);"><a href="https://www.linkedin.com/in/laura-kiss-b60900243/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">linkedin.com/in/laura-kiss-b60900243</a></p>
+          </div>
+        </div>
+
+        <div style="grid-column: span 4;">
+          <!-- IMAGE: CONTACT — PORTRAIT -->
+          <div class="media-frame aspect-1-1">
+            <span class="frame-label" data-i18n="contactImg">[BACK COVER / PORTRAIT OR PERSONAL LOGO]</span>
+            <img src="images/contact-portrait.jpeg" alt="Back cover — portrait or personal logo">
+            <span class="frame-specs">SQUARE — 1:1 RATIO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

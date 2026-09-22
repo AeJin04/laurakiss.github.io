@@ -1,0 +1,738 @@
+/* ==========================================================================
+   1. DESIGN TOKENS & VARIABLES
+   ========================================================================== */
+:root {
+  --bg-paper: #F7F5F0;
+  --bg-paper-alt: #EFECE6;
+  --text-ink: #111113;
+  --text-muted: #6E6E73;
+  --text-light: #F7F5F0;
+  --accent-red: #E63946;
+  --panel-dark: #0D0D0E;
+  --border-light: rgba(17, 17, 19, 0.12);
+  --border-dark: rgba(247, 245, 240, 0.15);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --page-width: 1440px;
+  --gutter: 2.5rem;
+
+  /* Header offset for precise smooth scrolling */
+  --header-offset: 70px;
+}
+
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--text-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY SYSTEM
+   Every large heading uses clamp() for fluid, capped sizing, and every
+   heading explicitly disables mid-word breaking. Words only ever wrap at
+   natural word boundaries — never inside a word, never hidden, never fixed
+   to a height that could clip taller (e.g. German) text.
+   ========================================================================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* Cover Big Display Title — the single largest title on the site */
+.cover-title {
+  font-size: clamp(1.3rem, 7.5vw - 0.12rem, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Section Headlines (e.g. "Curated Works", "Methods") */
+.section-title {
+  font-size: clamp(1.3rem, 1.8vw + 0.75rem, 1.8rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+/* Standard Editorial Project Headlines */
+.project-headline {
+  font-size: clamp(0.8rem, 4.57vw - 0.08rem, 2.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.meta-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.editorial-lead {
+  font-size: clamp(1.05rem, 0.9vw + 0.6rem, 1.3rem);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--text-ink);
+  overflow-wrap: break-word;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+   4. FIXED UTILITY HEADER, PRIMARY NAV & BILINGUAL SWITCHER
+   Uses min-height (never a fixed height) so the bar can never clip its own
+   content. The primary nav scrolls horizontally instead of wrapping, so the
+   header height stays constant and never overlaps the page content below it.
+   ========================================================================== */
+.utility-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  background: rgba(247, 245, 240, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1000;
+}
+
+.utility-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-height: 50px;
+  padding: 0.5rem 0;
+}
+
+.utility-brand {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  padding: 0 0.5rem;
+}
+.main-nav::-webkit-scrollbar { display: none; }
+
+.main-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--text-ink);
+  border-bottom-color: currentColor;
+}
+
+.lang-switcher {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: var(--text-ink);
+}
+
+.lang-btn.active {
+  color: var(--accent-red);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lang-divider {
+  color: var(--border-light);
+}
+
+/* Dark mode utility overrides */
+.theme-dark-active .utility-bar {
+  background: rgba(13, 13, 14, 0.92);
+  border-bottom-color: var(--border-dark);
+}
+.theme-dark-active .utility-brand {
+  color: var(--text-light);
+}
+.theme-dark-active .main-nav a {
+  color: rgba(247, 245, 240, 0.5);
+}
+.theme-dark-active .main-nav a:hover,
+.theme-dark-active .main-nav a.active {
+  color: var(--text-light);
+}
+.theme-dark-active .lang-btn {
+  color: rgba(247, 245, 240, 0.5);
+}
+.theme-dark-active .lang-btn:hover {
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   5. LAYOUT & GRID ARCHITECTURE
+   ========================================================================== */
+.container {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.magazine-page {
+  min-height: 100vh;
+  padding: 5rem 0 4rem 0;
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem 1.5rem;
+}
+
+.page-marker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.masthead {
+  border-bottom: 4px solid var(--text-ink);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   6. CLICKABLE TABLE OF CONTENTS (INTERACTIVE STYLING)
+   ========================================================================== */
+.index-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.index-item:hover {
+  color: var(--accent-red);
+  padding-left: 0.5rem;
+}
+
+.index-item h3 {
+  font-size: clamp(1.1rem, 1vw + 0.6rem, 1.4rem);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   7. MEDIA PLACEHOLDER / IMAGE SYSTEM
+   A single reusable component (.media-frame) that always reserves the
+   correct amount of space via aspect-ratio. With no <img> inside, it renders
+   a clearly labelled placeholder. Add an <img> and the layout does not
+   change — this is what makes the whole image system easy to fill in later.
+   ========================================================================== */
+.media-frame {
+  width: 100%;
+  background-color: var(--bg-paper-alt);
+  border: 1px solid var(--border-light);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.media-frame::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 15px,
+    rgba(17, 17, 19, 0.02) 15px,
+    rgba(17, 17, 19, 0.02) 30px
+  );
+  pointer-events: none;
+}
+
+.media-frame.aspect-16-9 { aspect-ratio: 16 / 9; }
+.media-frame.aspect-21-9 { aspect-ratio: 21 / 9; }
+.media-frame.aspect-4-3  { aspect-ratio: 4 / 3; }
+.media-frame.aspect-1-1  { aspect-ratio: 1 / 1; }
+.media-frame.aspect-3-4  { aspect-ratio: 3 / 4; }
+.media-frame.aspect-2-3  { aspect-ratio: 2 / 3; }
+
+.media-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.media-frame .frame-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-ink);
+  background: rgba(247, 245, 240, 0.85);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border-light);
+  align-self: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.media-frame .frame-specs {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  align-self: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+/* Once a real photo is dropped in, show the photo cleanly —
+   no placeholder stripes or label/specs tags on top of it. */
+.media-frame:has(img)::before,
+.media-frame:has(img) .frame-label,
+.media-frame:has(img) .frame-specs {
+  display: none;
+}
+
+.img-caption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.6rem;
+}
+
+/* ---- Editorial image layout components (used across every project) ---- */
+
+/* Image pair — two photographs side by side */
+.img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Image triptych — three photographs */
+.img-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Text beside a supporting image */
+.img-text-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Modifier: give the text column more room than the image, for a smaller,
+   more contained supporting photo (e.g. two stacked text blocks beside one image) */
+.img-text-pair--narrow-image {
+  grid-template-columns: 3fr 2fr;
+}
+
+/* Full-width image moment */
+.img-full {
+  width: 100%;
+}
+
+/* Editorial gallery — a larger, flexible collection that wraps automatically
+   regardless of how many photographs are dropped in */
+.editorial-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Visual Archive — closing documentation strip for a project */
+.visual-archive {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.visual-archive-label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.visual-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.theme-dark .visual-archive,
+.theme-dark .img-triptych,
+.theme-dark .img-pair {
+  border-color: var(--border-dark);
+}
+
+/* ==========================================================================
+   8. EDITORIAL COMPONENTS
+   ========================================================================== */
+.pull-quote {
+  font-family: var(--font-display);
+  font-size: clamp(0.7rem, 4.2vw - 0.15rem, 1.85rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  border-left: 4px solid var(--accent-red);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.editorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+.editorial-table th {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 2px solid var(--text-ink);
+}
+.editorial-table td {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+.meta-column {
+  border-top: 2px solid var(--text-ink);
+  padding-top: 1rem;
+}
+.meta-row {
+  display: grid;
+  grid-template-columns: minmax(auto, 45%) 1fr;
+  gap: 0.25rem 1rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.8rem;
+}
+.meta-row > span:last-child {
+  text-align: right;
+}
+
+/* ==========================================================================
+   9. METHODS PAGE
+   ========================================================================== */
+.methods-intro {
+  font-size: clamp(1.05rem, 0.9vw + 0.6rem, 1.3rem);
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 46rem;
+}
+
+.method-category {
+  margin-top: 5rem;
+}
+.method-category:first-of-type {
+  margin-top: 3rem;
+}
+
+.method-category-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1rem;
+  border-bottom: 2px solid var(--text-ink);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.method-category-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-red);
+}
+
+.method-category-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.15rem, 1.4vw + 0.5rem, 1.6rem);
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem 1.5rem;
+}
+
+.method-card {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.method-card-index {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.method-card-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(0.95rem, 0.5vw + 0.7rem, 1.1rem);
+  margin: 0.4rem 0 0.5rem;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.method-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.method-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   10. DARK THEME OVERRIDES
+   ========================================================================== */
+.theme-dark {
+  background-color: var(--panel-dark);
+  color: var(--text-light);
+}
+.theme-dark .page-marker { border-color: var(--border-dark); }
+.theme-dark .meta-text { color: rgba(247, 245, 240, 0.5); }
+.theme-dark .editorial-lead { color: var(--text-light); }
+.theme-dark .meta-column { border-color: var(--text-light); }
+.theme-dark .meta-row { border-color: var(--border-dark); }
+.theme-dark .editorial-table th { border-color: var(--text-light); }
+.theme-dark .editorial-table td { border-color: var(--border-dark); }
+.theme-dark .media-frame {
+  background-color: #161618;
+  border-color: var(--border-dark);
+}
+.theme-dark .media-frame::before {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 15px,
+    rgba(247, 245, 240, 0.02) 15px,
+    rgba(247, 245, 240, 0.02) 30px
+  );
+}
+.theme-dark .media-frame .frame-label {
+  background: rgba(13, 13, 14, 0.85);
+  color: var(--text-light);
+  border-color: var(--border-dark);
+}
+.theme-dark .img-caption { color: rgba(247, 245, 240, 0.5); }
+
+/* ==========================================================================
+   11. MEDIA QUERIES & RESPONSIVE BREAKPOINTS
+   Checked at 1440 / 1200 / 1024 / 768 / 390 / 320. Grid columns collapse to
+   a single natural-flow column well before content would ever have to
+   overflow or clip; nothing below relies on a fixed height.
+   ========================================================================== */
+
+/* 1200px */
+@media (max-width: 1200px) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+/* 1024px Tablet Landscape — below this, narrow multi-column splits (3–4
+   columns wide) get too tight for longer translated headlines/body text,
+   so layouts stack to a single column instead of holding a cramped grid. */
+@media (max-width: 1024px) {
+  :root {
+    --gutter: 1.75rem;
+  }
+
+  .img-triptych {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-12 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .grid-12 > * {
+    min-width: 0;
+  }
+}
+
+/* 768px Tablet Portrait */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 1.25rem;
+  }
+
+  .magazine-page {
+    min-height: auto;
+    padding: 4.5rem 0 3rem 0;
+  }
+
+  .index-item {
+    grid-template-columns: 46px 1fr auto;
+  }
+
+  .meta-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .meta-row > span:last-child {
+    text-align: left;
+  }
+
+  .editorial-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .img-pair,
+  .img-triptych,
+  .img-text-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .methods-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .method-card {
+    grid-column: unset;
+  }
+}
+
+/* 390px Mobile Small */
+@media (max-width: 390px) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .index-item {
+    grid-template-columns: 30px 1fr auto;
+    font-size: 0.85rem;
+  }
+
+  .editorial-gallery,
+  .visual-archive-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 320px Mobile Extra Small */
+@media (max-width: 340px) {
+  .editorial-gallery,
+  .visual-archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print/PDF Page Setup */
+@media print {
+  .utility-bar { display: none; }
+  body { background: white; color: black; }
+  .magazine-page { page-break-after: always; min-height: 100vh; padding: 2cm 0; }
+  .container { max-width: 100%; padding: 0 1cm; }
+}
